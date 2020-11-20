@@ -1,5 +1,17 @@
 
  OpenSSL 1.0.1j 15 Oct 2014
+ 
+ 
+OpenSSL Configure Modified for Apple Silicon Nov 20th 2020. Configures and compiles on M1 ARM64 Chip on macOS Big Sur latest.
+
+Run the following to compile and link as default OpenSSL on macOS Big Sur Apple Silicon
+
+./configure darwin64-arm64-cc no-asm
+make
+sudo make install
+sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
+
+Run openssl version to confirm running v1.0.1j
 
  Copyright (c) 1998-2011 The OpenSSL Project
  Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
